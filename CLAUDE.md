@@ -1,17 +1,12 @@
-# with-praxis — Public Product
+# withPraxis — AI Operational Partner Framework
 
-**Part of the Empire:** PX (`~/personal/praxis/`) • Keeper (`~/personal/keeper/`) • 16e (`~/projects/s16e/`)
+**Version:** 2.0
 
 ---
 
 ## What This Is
 
-Public, productized version of Praxis. Sanitized skills, commands, and documentation for external users.
-
-**Workflow:**
-1. Develop features in PX (`~/personal/praxis/`)
-2. Test with `/deploy`
-3. Publish to product: `/px:publish-to-product`
+A context engineering framework that transforms Claude Code into a personalized operational partner.
 
 ---
 
@@ -19,26 +14,60 @@ Public, productized version of Praxis. Sanitized skills, commands, and documenta
 
 ```
 with-praxis/
-├── commands/        # Productized commands
-├── skills/          # Productized skills
-├── system/          # Identity, knowledge-map
-├── docs/            # User documentation
-├── tools/           # Telemetry tool
-├── website/         # Product website
-└── install.sh       # User installation script
+├── commands/           # Slash commands
+│   ├── px/             # Praxis commands (setup, sync, review, research, sanitize, meeting/)
+│   ├── doc/            # Documentation commands (write, polish, validate/)
+│   └── dev/            # Development commands (implement)
+├── system/             # Identity, knowledge-map
+├── context/            # User context templates
+├── docs/               # User documentation
+└── install.sh          # Installation script
 ```
 
 ---
 
-## Key Difference from PX
+## Commands Overview
 
-| Aspect | PX (private) | with-praxis (public) |
-|--------|--------------|----------------------|
-| Sebastian-specific | ✅ | ❌ Removed |
-| Personal context | ✅ | ❌ Removed |
-| Full telemetry | ✅ | ✅ Included |
-| Experimental | ✅ | ❌ Stable only |
+### Praxis Commands (`/px:*`)
+- `/px:setup` - Initial configuration wizard
+- `/px:sync` - Update context files
+- `/px:review` - System health check
+- `/px:research` - Structured research (web + local)
+- `/px:sanitize` - Clean up speech-to-text transcriptions
+- `/px:meeting:analyze` - Meeting transcript analysis (DSGVO-compliant)
+
+### Documentation Commands (`/doc:*`)
+- `/doc:write` - Create documentation from code
+- `/doc:polish` - Polish docs (--readable or --compact mode)
+- `/doc:validate:links` - Validate links
+- `/doc:validate:code-references` - Validate code refs
+- `/doc:validate:performance-claims` - Catch unverified metrics
+
+### Development Commands (`/dev:*`)
+- `/dev:implement` - 5-phase development pipeline with quality gates
 
 ---
 
-**Remember:** This is the PUBLIC face of Praxis. No personal details, no experimental features, no Sebastian-specific content.
+## Core Concepts
+
+### Context Engineering
+- Minimal deployed context (~10KB)
+- Just-in-time loading via knowledge map
+- Commands specify what context they need
+- No context pollution
+
+### Quality Gates
+- Implementation-blind testing (agent doesn't see code)
+- Context-blind review (agent doesn't see chat history)
+- Validation between phases
+
+### DSGVO Compliance
+Meeting analysis follows strict rules:
+- Analyze the meeting, not the people
+- No "who said what" attribution
+- No behavior assessments
+- No personal profiles
+
+---
+
+**Philosophy:** AI as operational partner, not assistant. Knows your context, challenges your patterns, helps you build without breaking.

@@ -35,7 +35,7 @@ Praxis structures your context so Claude:
 
 ```bash
 # Clone the repo
-git clone https://github.com/sbernauer/with-praxis.git
+git clone https://github.com/sebastian-breitzke/with-praxis.git
 cd with-praxis
 
 # Run the installer
@@ -55,21 +55,60 @@ The setup wizard will ask you 5 questions and generate your personalized system.
 ```
 ~/.claude/
 ├── CLAUDE.md              # Praxis identity + knowledge map
-├── skills/                # Auto-triggered expertise
-│   ├── research/          # Market, technical, competitive research
-│   ├── documentation/     # Doc creation, updates, standards
-│   ├── senior-dev/        # Architecture, code review, patterns
-│   └── unit-testing/      # Test-first, behavior-driven
 └── commands/              # Slash commands for workflows
-    └── px/
-        ├── setup.md       # /px:setup - Initial configuration
-        ├── sync.md        # /px:sync - Update your context
-        └── review.md      # /px:review - System health check
+    ├── px/                # Praxis commands
+    │   ├── setup.md       # /px:setup - Initial configuration
+    │   ├── sync.md        # /px:sync - Update your context
+    │   ├── review.md      # /px:review - System health check
+    │   ├── research.md    # /px:research - Structured research
+    │   ├── sanitize.md    # /px:sanitize - Clean up dictations
+    │   └── meeting/
+    │       └── analyze.md # /px:meeting:analyze - Meeting analysis
+    ├── doc/               # Documentation commands
+    │   ├── write.md       # /doc:write - Create docs from code
+    │   ├── polish.md      # /doc:polish - Polish docs
+    │   └── validate/      # Validation tools
+    │       ├── links.md
+    │       ├── code-references.md
+    │       └── performance-claims.md
+    └── dev/               # Development commands
+        └── implement.md   # /dev:implement - 5-phase dev pipeline
 
 ~/praxis/                  # Your knowledge base
 ├── context/               # Who you are, your team, priorities
 └── patterns/              # Anti-patterns to watch for
 ```
+
+---
+
+## Commands
+
+### Praxis Commands
+
+| Command | Purpose |
+|---------|---------|
+| `/px:setup` | Initial configuration wizard |
+| `/px:sync` | Update context files |
+| `/px:review` | System health check |
+| `/px:research` | Structured research (web + local) |
+| `/px:sanitize` | Clean up speech-to-text transcriptions |
+| `/px:meeting:analyze` | Analyze meeting transcripts |
+
+### Documentation Commands
+
+| Command | Purpose |
+|---------|---------|
+| `/doc:write` | Create documentation from code |
+| `/doc:polish` | Polish docs (--readable or --compact) |
+| `/doc:validate:links` | Validate all links |
+| `/doc:validate:code-references` | Validate code refs |
+| `/doc:validate:performance-claims` | Catch unverified metrics |
+
+### Development Commands
+
+| Command | Purpose |
+|---------|---------|
+| `/dev:implement` | 5-phase development pipeline |
 
 ---
 
@@ -87,7 +126,7 @@ The key innovation is **just-in-time context loading**:
    → Focused context, efficient tokens, relevant responses
 ```
 
-Your CLAUDE.md stays small (~10KB). When Praxis needs your team dynamics for a meeting, it loads that. When doing code review, it loads the senior-dev skill. Nothing wasted.
+Your CLAUDE.md stays small (~10KB). When Praxis needs your team dynamics for a meeting, it loads that. When doing code review, it loads the relevant patterns. Nothing wasted.
 
 ### Pattern Recognition
 
@@ -98,138 +137,81 @@ Define anti-patterns you want to avoid:
 
 **Pattern:** Solving problems instead of teaching others to solve them
 **Signal:** "Let me just fix this real quick"
-**Challenge:** "Who could learn to own this?"
-**Why it matters:** You become the bottleneck. Others don't grow.
+**Challenge:** "Who could learn to handle this?"
 ```
 
-Praxis watches for these and intervenes when detected.
+Praxis will recognize when you're falling into these patterns and challenge you.
 
-### Self-Maintenance
+### Quality Gates (Development)
 
-Praxis keeps itself current:
+The `/dev:implement` command uses a 5-phase pipeline:
 
-- `/px:sync` — Update your profile, priorities, team
-- `/px:review` — Validate system health, check for issues
-- Automatic staleness detection (reminds you to update)
+1. **P0: Context & Planning** — Understand requirements, create plan
+2. **P1: Implementation** — Write code following patterns
+3. **P2: Testing** — Implementation-blind (agent doesn't see code)
+4. **P3: Review** — Context-blind (agent doesn't see chat history)
+5. **P4: Finalize** — Docs, tests, PR
 
----
+Why blind testing/review? Prevents confirmation bias. Fresh eyes catch what context-polluted eyes miss.
 
-## Commands
+### DSGVO-Compliant Meeting Analysis
 
-| Command | Purpose |
-|---------|---------|
-| `/px:setup` | Initial guided configuration |
-| `/px:sync` | Update context files |
-| `/px:review` | System health check |
+Meeting analysis follows strict privacy rules:
 
-### Example Commands (templates)
-
-| Command | Purpose |
-|---------|---------|
-| `/dev:plan` | Turn idea into spec with answer blocks |
-| `/dev:implement` | Build from spec with tests |
-| `/doc:write` | Create documentation from code |
-| `/doc:compress` | Remove duplication, sharpen text |
+| ✅ Allowed | ❌ Not Allowed |
+|-----------|----------------|
+| What was decided | Who said what |
+| Format assessment | Behavior assessment |
+| Anonymized insights | Personal profiles |
 
 ---
 
 ## Customization
 
-### Adding Your Own Commands
+After setup, customize by editing:
 
-```markdown
-<!-- ~/.claude/commands/my-command.md -->
----
-description: What this command does
----
+- `~/praxis/context/person.md` — Your profile
+- `~/praxis/context/team.md` — Your team
+- `~/praxis/context/priorities.md` — Current focus
+- `~/praxis/patterns/` — Anti-patterns to watch
 
-# /my-command
+See [docs/customization.md](docs/customization.md) for details.
 
-[Your prompt here]
-```
-
-### Adding Skills
-
-```markdown
-<!-- ~/.claude/skills/my-skill/SKILL.md -->
----
-name: my-skill
-description: What triggers this skill
 ---
 
-[Skill instructions]
-```
+## Documentation
 
-### Updating Context
-
-Edit files in `~/praxis/context/`:
-- `person.md` — Your profile
-- `team.md` — Key people
-- `priorities.md` — Current goals
-- `patterns.md` — Anti-patterns to watch
-
-Then run `/px:sync` to validate and deploy.
+- [Getting Started](docs/getting-started.md)
+- [Customization Guide](docs/customization.md)
+- [Context Engineering](docs/context-engineering.md)
+- [FAQ](docs/faq.md)
 
 ---
 
 ## Philosophy
 
-### AI as Operational Partner
+**Praxis is not:**
+- A prompt template
+- A collection of tricks
+- An assistant that does what you say
 
-Not assistant (passive, waits for orders).
-Not tool (does one thing, no context).
-**Partner** (knows context, challenges, collaborates).
+**Praxis is:**
+- An operational partner
+- A context engineering framework
+- A system that challenges you when needed
 
-### Pragmatic Quality
-
-Built for real work, not enterprise theater:
-- **Right-sized solutions** — Not over-engineered
-- **Evolution-ready** — Can grow, but doesn't gold-plate
-- **Ship fast, refactor smart** — Pragmatic quality
-
-### Direct Communication
-
-No fluff, no hedging:
-- "Frontmatter broken. Fixing." (not "I noticed there might be an issue...")
-- "Done. Next?" (not "I've completed the task you requested...")
-- Evidence over opinion, action over explanation
-
----
-
-## FAQ
-
-**Q: Does this work with other AI tools?**
-A: Currently optimized for Claude Code. The concepts apply elsewhere, but the implementation is Claude-specific.
-
-**Q: How much does it cost?**
-A: Free and open source (MIT license). You need a Claude Code subscription.
-
-**Q: Can I use this for my team?**
-A: Yes! Each person runs their own setup. Team patterns can be shared.
-
-**Q: How is this different from just writing a good CLAUDE.md?**
-A: Structure. Praxis provides the architecture (skills, commands, context loading, maintenance) that makes a complex system manageable.
-
----
-
-## Contributing
-
-Issues and PRs welcome. This is an evolving system.
+The goal isn't to make Claude do more for you. It's to make Claude work *with* you, knowing your context, your patterns, and when to push back.
 
 ---
 
 ## License
 
-MIT — Do what you want with it.
+MIT — Use it, fork it, make it yours.
 
 ---
 
-## Author
+## Credits
 
-Built by [Sebastian Bernauer](https://s16e.de) as a real production system, then extracted for others.
+Created by [Sebastian Breitzke](https://s16e.com)
 
-**"AI as Operational Partner"** is the thesis. Praxis is the proof.
-
----
-
-[with-praxis.com](https://with-praxis.com)
+Built with Claude Code. Powered by context engineering.
