@@ -1,65 +1,121 @@
 # Current Priorities
 
-**This file is created by `/px:setup`**
-
-What you're focused on right now. Update with `/px:sync priorities`.
-
----
-
-## Template
-
-```markdown
-# Current Priorities
-
-Updated: [Date]
+**Status:** Template - Run `/px:setup` or fill manually
+**Last Updated:** [Date]
 
 ---
 
-## Active Focus
+## How to Fill This File
 
-1. **[Priority 1]**
-   [Details, deadline, context]
+This file defines what you're focused on right now.
 
-2. **[Priority 2]**
-   [Details, deadline, context]
+**Update regularly** via `/px:sync priorities` or edit directly.
 
-3. **[Priority 3]**
-   [Details, deadline, context]
+**Option A: Answer the questions below**
 
-## Challenges
-[Current blockers or difficulties]
+**Option B: Import from your existing AI**
 
-## Completed Recently
-[Wins to celebrate]
+Paste this into ChatGPT, Claude, or your current AI assistant:
+
+```
+I'm setting up a new AI assistant and need to document my current priorities.
+
+Based on our recent conversations, help me identify:
+
+1. **Active Focus:** What am I currently working on?
+   - Projects, initiatives, goals
+   - What's taking most of my time?
+
+2. **This Quarter:** What are my key objectives?
+   - Deliverables, milestones, deadlines
+
+3. **Blockers:** What's getting in the way?
+   - Challenges, dependencies, obstacles
+
+4. **On Hold:** What have I deprioritized?
+   - Things I've pushed back
+   - Future considerations
+
+Format as a prioritized list with context.
 ```
 
+Then paste the response below and save this file.
+
 ---
 
-## Example
+## Active Focus (This Week/Sprint)
+
+### Priority 1: [Title]
+<!-- What's the #1 thing right now? -->
+**Status:**
+**Deadline:**
+**Notes:**
+
+### Priority 2: [Title]
+**Status:**
+**Deadline:**
+**Notes:**
+
+### Priority 3: [Title]
+**Status:**
+**Deadline:**
+**Notes:**
+
+---
+
+## This Quarter Goals
+
+1. **[Goal]** — [Measure of success]
+2. **[Goal]** — [Measure of success]
+3. **[Goal]** — [Measure of success]
+
+---
+
+## Blockers & Challenges
+<!-- What's getting in the way? -->
+
+
+---
+
+## On Hold / Deprioritized
+<!-- What have you pushed back? -->
+
+
+---
+
+## Example (Filled)
 
 ```markdown
-# Current Priorities
+## Active Focus (This Week)
 
-Updated: 2025-01-15
+### Priority 1: Ship v2.0 Release
+**Status:** In final testing
+**Deadline:** Friday
+**Notes:** Need to fix 2 critical bugs, then deploy. Marketing ready.
 
----
+### Priority 2: Hire Senior Dev
+**Status:** Interviewing
+**Deadline:** End of month
+**Notes:** 3 candidates in pipeline. Final interviews this week.
 
-## Active Focus
+### Priority 3: Q1 Planning Doc
+**Status:** Draft
+**Deadline:** Next Monday
+**Notes:** Need input from Lisa on product roadmap.
 
-1. **Ship v2.0 by end of January**
-   Major release with new payment system. On track but tight.
+## This Quarter Goals
 
-2. **Hire 2 developers**
-   Posted job, reviewing candidates. Need to make decision by Feb.
+1. **Ship v2.0** — Live in production, <1% error rate
+2. **Grow team to 6** — 2 new hires onboarded
+3. **Reduce tech debt** — Payment system refactored
 
-3. **Reduce tech debt in auth system**
-   Legacy code causing bugs. Blocked by v2.0 deadline.
+## Blockers & Challenges
+- DevOps bandwidth (shared with other teams)
+- Unclear requirements from enterprise client
+- Mike out sick, slowing payment work
 
-## Challenges
-- Time pressure from v2.0 affecting hiring focus
-- Auth system keeps causing production issues
-
-## Completed Recently
-- ✓ Migrated to new CI/CD pipeline
-- ✓ Onboarded new designer
+## On Hold / Deprioritized
+- Mobile app exploration (Q2)
+- Documentation overhaul (after v2.0)
+- New monitoring system (nice-to-have)
 ```

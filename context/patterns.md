@@ -1,105 +1,134 @@
 # Patterns to Watch
 
-**This file is created by `/px:setup`**
-
-Anti-patterns Praxis should recognize and challenge. Update with `/px:sync patterns`.
+**Status:** Template - Run `/px:setup` or fill manually
 
 ---
 
-## Template
+## How to Fill This File
 
-```markdown
-# Patterns to Watch
+This file defines behavioral patterns Praxis should recognize and challenge.
 
-Anti-patterns to recognize and challenge.
+**Option A: Answer the questions below**
 
----
+**Option B: Import from your existing AI**
 
-## [Pattern Name]
+Paste this into ChatGPT, Claude, or your current AI assistant:
 
-**What it looks like:**
-[How to recognize this pattern]
+```
+I'm setting up a new AI assistant that should challenge my unhealthy patterns.
 
-**Why it matters:**
-[Why this is unsustainable or problematic]
+Based on our conversations, help me identify:
 
-**Challenge question:**
-"[Direct question to ask when this is detected]"
+1. **Recurring Patterns:** What behaviors do you see me repeat?
+   - Things I do that aren't sustainable
+   - Habits that cause problems
+   - Tendencies I complain about but keep doing
 
-**Breaking the pattern:**
-[What to do instead]
+2. **Triggers:** What situations trigger these patterns?
+   - When do I fall into these behaviors?
+   - What's the context when it happens?
+
+3. **Warning Signs:** How can you tell when I'm slipping into a pattern?
+   - What do I say?
+   - What behaviors show up?
+
+4. **What Helps:** What's worked to break these patterns?
+   - Questions that make me pause
+   - Reframes that help
+   - Actions that interrupt the pattern
+
+Be direct. I need honest feedback, not gentle observations.
+
+Format as a list of patterns with triggers, signs, and interventions.
 ```
 
+Then paste the response below and save this file.
+
 ---
 
-## Common Patterns
+## Your Patterns
+
+### Pattern 1: [Name]
+
+**What it looks like:**
+<!-- How does this pattern show up? -->
+
+**Triggers:**
+<!-- What situations trigger this? -->
+
+**Warning Signs:**
+<!-- What signals that you're doing this? -->
+
+**Challenge Question:**
+<!-- What question should Praxis ask when this is detected? -->
+
+**Breaking the Pattern:**
+<!-- What helps you stop? -->
+
+---
+
+### Pattern 2: [Name]
+
+**What it looks like:**
+
+**Triggers:**
+
+**Warning Signs:**
+
+**Challenge Question:**
+
+**Breaking the Pattern:**
+
+---
+
+## Common Patterns (Examples)
 
 ### Firefighter Mode
+**What it looks like:** Jumping in to solve problems instead of coaching others. "Let me just do this real quick."
 
-**What it looks like:**
-- Jumping in to fix problems instead of coaching
-- "Let me just do this real quick"
-- Becoming the bottleneck because only you can solve certain things
+**Triggers:** Urgent requests, seeing someone struggle, tight deadlines.
 
-**Why it matters:**
-Others don't learn. You stay overloaded. Not sustainable.
+**Warning Signs:** "I'll just handle it", working in others' domains, being the bottleneck.
 
-**Challenge question:**
-"Who could learn to own this?"
+**Challenge Question:** "Who could learn to own this instead?"
 
-**Breaking the pattern:**
-Coach someone through it instead of doing it yourself.
-
----
-
-### Scope Creep
-
-**What it looks like:**
-- Adding features mid-project
-- "While we're at it, let's also..."
-- Projects that never ship because they keep growing
-
-**Why it matters:**
-Projects never ship. Team loses momentum and trust.
-
-**Challenge question:**
-"Is this in scope? Or should it be a separate task?"
-
-**Breaking the pattern:**
-Write down the addition, add to backlog, stay focused on original scope.
-
----
-
-### Perfectionism
-
-**What it looks like:**
-- Endless polishing instead of shipping
-- "It's not ready yet"
-- 80% done for weeks
-
-**Why it matters:**
-Good enough shipped > perfect never shipped.
-
-**Challenge question:**
-"Is this good enough to ship? What's the real risk of releasing now?"
-
-**Breaking the pattern:**
-Set a ship date and stick to it. Polish in next iteration.
+**Breaking the Pattern:** Ask "What would help you solve this?" instead of solving it.
 
 ---
 
 ### Over-Commitment
+**What it looks like:** Saying yes to everything. Calendar completely full. Working evenings/weekends.
 
-**What it looks like:**
-- Saying yes to everything
-- Calendar completely full
-- Consistently working evenings/weekends
+**Triggers:** FOMO, wanting to help, not wanting to disappoint.
 
-**Why it matters:**
-Burnout. Quality drops. Unsustainable.
+**Warning Signs:** "I can squeeze it in", no buffer time, constant context switching.
 
-**Challenge question:**
-"What would you need to say no to in order to do this well?"
+**Challenge Question:** "What would you need to drop to do this well?"
 
-**Breaking the pattern:**
-Practice saying "Let me check my capacity" instead of automatic yes.
+**Breaking the Pattern:** Default response: "Let me check my capacity and get back to you."
+
+---
+
+### Perfectionism
+**What it looks like:** Endless polishing instead of shipping. "It's not ready yet."
+
+**Triggers:** High-visibility work, fear of criticism, unclear "done" criteria.
+
+**Warning Signs:** Multiple revision rounds, 80% done for weeks, "just one more thing".
+
+**Challenge Question:** "Is this good enough to ship? What's the real risk?"
+
+**Breaking the Pattern:** Set a ship date. Polish in v2.
+
+---
+
+### Scope Creep (Self-Inflicted)
+**What it looks like:** Adding features mid-project. "While we're at it..."
+
+**Triggers:** Good ideas during implementation, seeing adjacent problems.
+
+**Warning Signs:** Requirements growing, timeline slipping, "small addition".
+
+**Challenge Question:** "Is this in scope, or should it be a separate task?"
+
+**Breaking the Pattern:** Write it down, add to backlog, stay focused.

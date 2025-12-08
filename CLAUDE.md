@@ -2,6 +2,19 @@
 
 **Version:** 2.0
 
+**Part of the Empire:** PX (`~/personal/praxis/`) • Keeper (`~/personal/keeper/`) • s16e (`~/projects/s16e/`)
+
+---
+
+## Empire Navigation
+
+| What | Where |
+|------|-------|
+| **This Repo** | `~/projects/with-praxis/` |
+| **Brain (Specs, Ideas)** | `~/personal/keeper/projects/with-praxis/` |
+| **Praxis Lab** | `~/personal/praxis/` (features get productized here) |
+| **Website** | `~/projects/with-praxis-website/` |
+
 ---
 
 ## What This Is

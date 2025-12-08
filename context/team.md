@@ -1,49 +1,100 @@
-# Team
+# Your Team
 
-**This file is created by `/px:setup`**
-
-Key people you work with. Run `/px:setup` or edit manually.
+**Status:** Template - Run `/px:setup` or fill manually
 
 ---
 
-## Template
+## How to Fill This File
 
-```markdown
-# Team
+This file defines the key people you work with so Praxis understands your context.
 
-People I work with regularly.
+**Option A: Add people as you mention them**
 
----
+Start minimal. Add details when relevant.
 
-## [Name]
-**Role:** [Their role]
-**Relationship:** [How you work together]
-**Notes:** [Anything helpful to know]
+**Option B: Import from your existing AI**
+
+Paste this into ChatGPT, Claude, or your current AI assistant:
+
+```
+I'm setting up a new AI assistant and need to document my key working relationships.
+
+Based on our conversations, help me identify:
+
+1. **Key People:** Who do I mention frequently?
+   - Direct reports, peers, managers
+   - Stakeholders, clients, partners
+
+2. **For each person:**
+   - Their role/relationship to me
+   - How we typically interact
+   - Any context that's important (communication style, history, dynamics)
+
+3. **Team Dynamics:**
+   - How does the team work together?
+   - Any tensions or challenges?
+   - What's working well?
+
+Keep it factual and useful, not gossip-y.
+
+Format as a list of people with role and relevant context.
 ```
 
+Then paste the response below and save this file.
+
 ---
 
-## Example
+## Key People
+
+### [Name]
+**Role:**
+**Relationship:** <!-- Manager / Direct Report / Peer / Stakeholder / Client -->
+**Context:** <!-- How you work together, communication style, relevant history -->
+
+---
+
+### [Name]
+**Role:**
+**Relationship:**
+**Context:**
+
+---
+
+## Team Dynamics
+<!-- Optional: How does your team work together? -->
+
+
+---
+
+## Example (Filled)
 
 ```markdown
-# Team
+### Sarah
+**Role:** VP Engineering (my manager)
+**Relationship:** Manager
+**Context:** Very supportive, gives autonomy. Likes written updates over meetings.
+Weekly 1:1 on Tuesdays. Values shipping over perfection.
 
-People I work with regularly.
+### Mike
+**Role:** Senior Developer
+**Relationship:** Direct Report
+**Context:** Strong technically, needs push to communicate more.
+Been on team 2 years. Owns the payment system.
 
----
-
-## Sarah
-**Role:** Engineering Manager (my manager)
-**Relationship:** Weekly 1:1s, she handles people stuff
-**Notes:** Prefers written updates before meetings
-
-## Mike
-**Role:** Senior Developer (peer)
-**Relationship:** Pair programming, code reviews
-**Notes:** Expert in backend, go to for architecture questions
-
-## Lisa
+### Lisa
 **Role:** Product Owner
-**Relationship:** Daily standups, sprint planning
-**Notes:** Very detail-oriented, appreciates thorough specs
+**Relationship:** Peer
+**Context:** Fast-moving, lots of ideas. Sometimes scope creeps.
+Good at customer insight. Meets with me daily for prioritization.
+
+### James (CTO)
+**Role:** CTO
+**Relationship:** Skip-level
+**Context:** Only interacts for big decisions. Prefers data-driven arguments.
+Monthly architecture review with him.
+
+## Team Dynamics
+Small team (4 devs), generally good collaboration.
+Mike and Alex sometimes clash on code style - I mediate.
+Lisa brings lots of requests - I protect team capacity.
 ```
